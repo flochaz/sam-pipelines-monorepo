@@ -120,7 +120,7 @@ Resources:
   Pipeline:
     Type: AWS::CodePipeline::Pipeline
     Properties:
-      Name: !Ref SubFolderName
+      Name: 'projectA'
       ArtifactStore:
         Location: !Ref PipelineArtifactsBucket
         Type: S3
@@ -156,7 +156,7 @@ Resources:
                 RoleArn: !GetAtt PipelineStackCloudFormationExecutionRole.Arn
                 StackName: !Ref AWS::StackName
                 ChangeSetName: !Sub ${AWS::StackName}-ChangeSet
-                TemplatePath: SourceCodeAsZip::codepipeline.yaml
+                TemplatePath: SourceCodeAsZip::projectA/codepipeline.yaml
                 Capabilities: CAPABILITY_NAMED_IAM
                 ParameterOverrides: !Sub |
                   {
@@ -586,7 +586,7 @@ Resources:
       ServiceRole: !GetAtt CodeBuildServiceRole.Arn
       Source:
         Type: CODEPIPELINE
-        BuildSpec: !Sub ${SubFolderName}/pipeline/buildspec_feature.yml
+        BuildSpec: projectA/pipeline/buildspec_feature.yml
 
   CodeBuildProjectBuildAndPackage:
     Condition: IsMainBranchPipeline
@@ -621,7 +621,7 @@ Resources:
       ServiceRole: !GetAtt CodeBuildServiceRole.Arn
       Source:
         Type: CODEPIPELINE
-        BuildSpec: !Sub ${SubFolderName}/pipeline/buildspec_feature.yml
+        BuildSpec: projectA/pipeline/buildspec_build_package.yml
 
   # Uncomment and modify the following step for running the integration tests
   # CodeBuildProjectIntegrationTest:
