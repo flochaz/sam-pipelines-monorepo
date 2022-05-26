@@ -36,7 +36,7 @@ Parameters:
     Default: "GitHub"
   FullRepositoryId:
     Type: String
-    Default: "flochaz/sam-pipelines-monorepo"
+    Default: "Courage-Nyah/sam-pipelines-monorepo"
   MainGitBranch:
     Type: String
     Default: "common-pipeline"
@@ -45,19 +45,19 @@ Parameters:
     Default: "template.yaml"
   TestingRegion:
     Type: String
-    Default: "eu-west-2"
+    Default: "us-east-1"
   TestingStackName:
     Type: String
     Default: "sam-app"
   TestingPipelineExecutionRole:
     Type: String
-    Default: "arn:aws:iam::354087173127:role/aws-sam-cli-managed-test-pip-PipelineExecutionRole-10Q3R2PSJD8Z1"
+    Default: "arn:aws:iam::731179564832:role/aws-sam-cli-managed-test-pip-PipelineExecutionRole-C5MNEPY37BDY"
   TestingCloudFormationExecutionRole:
     Type: String
-    Default: "arn:aws:iam::354087173127:role/aws-sam-cli-managed-test-CloudFormationExecutionR-1GX95NEQU406B"
+    Default: "arn:aws:iam::731179564832:role/aws-sam-cli-managed-test-CloudFormationExecutionR-1F4G56E74ZKYV"
   TestingArtifactBucket:
     Type: String
-    Default: "aws-sam-cli-managed-test-pipeline-artifactsbucket-nup5nj1b9dfb"
+    Default: "aws-sam-cli-managed-test-pipeline-artifactsbucket-6pmr47yjwrty"
   TestingImageRepository:
     Type: String
     # If there are functions with "Image" PackageType in your template,
@@ -66,19 +66,19 @@ Parameters:
     Default: ""
   ProdRegion:
     Type: String
-    Default: "eu-west-1"
+    Default: "us-east-1"
   ProdStackName:
     Type: String
     Default: "sam-app"
   ProdPipelineExecutionRole:
     Type: String
-    Default: "arn:aws:iam::670535138659:role/aws-sam-cli-managed-prod-pip-PipelineExecutionRole-Y364KSM6UVRV"
+    Default: "arn:aws:iam::731179564832:role/aws-sam-cli-managed-prod-pip-PipelineExecutionRole-L31X0D6PDV9B"
   ProdCloudFormationExecutionExeRole:
     Type: String
-    Default: "arn:aws:iam::670535138659:role/aws-sam-cli-managed-prod-CloudFormationExecutionR-1VU2ZQCJIDV7W"
+    Default: "arn:aws:iam::731179564832:role/aws-sam-cli-managed-prod-CloudFormationExecutionR-W35VEBN05GQL"
   ProdArtifactBucket:
     Type: String
-    Default: "aws-sam-cli-managed-prod-pipeline-artifactsbucket-1l6ytovke2ois"
+    Default: "aws-sam-cli-managed-prod-pipeline-artifactsbucket-1r4w4urvc78wq"
   ProdImageRepository:
     Type: String
     # If there are functions with "Image" PackageType in your template,
